@@ -1,0 +1,4 @@
+elasticsearch
+requests
+google-adk
+python-dotenv
