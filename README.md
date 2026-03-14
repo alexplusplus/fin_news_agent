@@ -2,7 +2,7 @@
 
 A voice-enabled financial market news agent built with Google ADK and Elasticsearch semantic search.
 
-**Live demo:** https://news-agent-74205747062.us-central1.run.app/ *(news dataset covers 2023)*
+**Live demo:** https://fin-news-agent-74205747062.us-central1.run.app/ *(news dataset covers 2023)*
 
 ## What it does
 
@@ -41,13 +41,20 @@ Run the first sections of [fin_news_agent.ipynb](fin_news_agent.ipynb) to:
 
 The notebook creates a `find_news_by_topic` ES|QL tool in Elastic Agent Builder, exposed via the Elastic MCP Server.
 
-**3. Configure environment**
+**3. Set up and configure the ADK agent**
 
-Create `fin_news_agent/.env`:
+Scaffold the agent:
+
+```bash
+adk create --type=code fin_news_agent --model gemini-2.5-flash-native-audio-preview-12-2025 --api_key $GOOGLE_API_KEY
+```
+
+The `fin_news_agent/agent.py` provided in this repo replaces the generated scaffold with the MCP tool integration and system prompt.
+
+Add the following variables to `fin_news_agent/.env`:
 ```
 KIBANA_URL=https://<your-project>.kb.<region>.gcp.elastic.cloud:443
 KIBANA_API_KEY=<your-api-key>
-GOOGLE_API_KEY=<your-gemini-api-key>
 ```
 
 **4. Run locally**
