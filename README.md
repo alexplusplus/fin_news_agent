@@ -7,6 +7,8 @@ A voice-enabled financial market news agent built with Google ADK and Elasticsea
 ## What it does
 
 Ask questions about financial market news in natural language (voice mode only). The agent retrieves relevant articles from a semantic search index and synthesizes a grounded response combining a high-level overview with specific facts (dates, companies, events).
+### Video Walkthrough
+[![Watch the video](https://img.youtube.com/vi/onpptenpStw/hqdefault.jpg)](https://www.youtube.com/watch?v=onpptenpStw)
 
 ## Architecture
 ![Architecture](/News%20Agent%20Diagram.jpg)
